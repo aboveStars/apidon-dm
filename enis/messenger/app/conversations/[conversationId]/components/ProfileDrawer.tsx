@@ -101,7 +101,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                           <div className="mb-2">
                             {data.isGroup ? <AvatarGroup users={data.users} /> : <Avatar user={otherUser} />}
                           </div>
-                          <div>
+                          <div className="text-white">
                             {title}
                           </div>
                           <div className="text-sm text-gray-500">
@@ -130,17 +130,17 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                                   sm:flex-shrink-0
                                 "
                               >
-                                Emails
+                                Members
                               </dt>
                               <dd 
                                 className="
                                   mt-1 
                                   text-sm 
-                                  text-gray-900 
+                                  text-white 
                                   sm:col-span-2
                                 "
                               >
-                                {data.users.map((user) => user.email).join(', ')}
+                                {data.users.map((user) => user.name).join(', ')}
                               </dd>
                             </div>
                           )}
